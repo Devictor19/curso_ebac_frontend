@@ -41,6 +41,8 @@ header li a {
 .articles article img {
     /*height: 180px;*/
     width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .articles article {
@@ -69,6 +71,7 @@ section h2,
     text-decoration: none;
     font-weight: bold;
     margin-top: 8px;
+    border-radius: 10px;
 }
 
 .articles article a:hover {
@@ -78,14 +81,15 @@ section h2,
 .articles article p,
 .articles article a {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: min(20px, 2vw);
 }
 
 .articles article h3 {
-    font-size: 24px;
+    font-size: min(32px, 3vw);
 }
 
 section h2 {
-    font-size: 32px;
+    font-size: max(48px, 1vw);
 }
 
 #sports {
@@ -102,4 +106,71 @@ section h2 {
 
 #economy .articles article a{
     background-color: #ff9f1a;
+}
+
+#entreteriment {
+    background-color: rgba(0,0,200,0.2);
+}
+
+#entreteriment h2 {
+    color: #004552fb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: min(5000px, 5vw);
+    text-decoration: underline;
+    text-align: left;
+}
+
+#entreteriment .articles article a {
+    background-color: #00badb;
+}
+
+#Technology h2 {
+    color: #520000fb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: min(5000px, 5vw);
+    text-decoration: underline;
+    text-align: left;
+}
+
+#Technology {
+    background-color: rgba(500, 0, 0, 0.3);
+}
+
+#Technology .articles article a{
+    background-color: #940000;
+}
+
+p {
+    max-height: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+@media (max-width: 1200px) {
+    .container,
+    header, header li{
+        display: block;
+    }
+
+    .articles,header,header li,
+    #entreteriment,
+    #technology h2{
+        width: 80vw;
+    }
+}
+@media (max-width: 768px) {
+    .container,
+    .articles{
+        display: block;
+    }
+
+    .container,
+    .articles,
+    header,
+    header li,
+    #entreteriment,
+    #technology h2{
+        width: 80vw;
+    }
 }
