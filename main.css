@@ -143,3 +143,9 @@ footer {
     color: #ecf0f1;
     padding: 16px 0;
 }
+
+footer .roda-pe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
